@@ -1,0 +1,20 @@
+#booking-form{
+   
+    .container{
+        padding-right: 8%;
+        padding-left: 8%;
+      
+        .content{
+            color:white;
+            text-align: center;
+            background: rgba(49,49,50,.7);
+            padding: 1rem 0 0 0;
+            .form-group:first-child{
+                padding-left: 15px;
+            }
+            .form-group:last-child{
+                padding-right: 15px;
+            }
+        }
+    }
+}
