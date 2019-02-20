@@ -1,0 +1,181 @@
+.navbar{
+    
+    
+    width: 100%;
+    font-size:20px;
+    padding:20px 10%;
+
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 10;
+    transition:all 0.5s;
+
+    .nav-item{
+        padding: 0.5rem 1rem;
+    }
+    .btn--navbar{
+        background-color: #BD1B49;
+        color:#ffff;
+        
+    }
+    .navbar-brand{
+        color:white;
+        border: 1px solid white;
+        padding: 5px 10px;
+    }
+    .nav-link{
+        color:white
+    }
+    .navbar-nav{
+        margin: 0 18%;
+    }
+    .fa-search{
+        color:white;
+    }
+    @media screen and (max-width:992px) {
+        .mobileMenu{
+            position: fixed;
+            top: 9px;
+            bottom:0;
+            left:0;
+            margin:auto;
+            background-color: rgba(0,0,0,.8);
+            width: 100%;
+            transform: translateX(-100%)        ;
+            -webkit-transform: translateX(-100%)        ;
+            -moz-transform: translateX(-100%)        ;
+            -ms-transform: translateX(-100%)        ;
+            -o-transform: translateX(-100%)        ;
+            transition: all ease 0.25s        ;
+            -webkit-transition: all ease 0.25s        ;
+            -moz-transition: all ease 0.25s        ;
+            -ms-transition: all ease 0.25s        ;
+            -o-transition: all ease 0.25s        ;
+            &.onRight{
+                left:auto;
+                right:0;
+                transform: translateX(100%)            ;
+                -webkit-transform: translateX(100%)            ;
+                -moz-transform: translateX(100%)            ;
+                -ms-transform: translateX(100%)            ;
+                -o-transform: translateX(100%)            ;
+            }
+            &.open{
+                transform: translateX(0)            ;
+                -webkit-transform: translateX(0)            ;
+                -moz-transform: translateX(0)            ;
+                -ms-transform: translateX(0)            ;
+                -o-transform: translateX(0)            ;
+            }
+           
+        }
+        
+    }
+}
+
+@media screen and (max-width:576px){
+    .sidebar{
+        position: fixed;
+        top:0;
+        z-index: 10;
+        right:-60%;
+        width: 60%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        p{
+            color:white;
+            font-size: 20px;
+            position: absolute;
+            top:50px;
+            left:10%;
+    
+        }
+    }
+}
+
+
+.sidebar{
+        position: fixed;
+        top:0;
+        z-index: 10;
+        right:-40%;
+        width: 40%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        p{
+            color:white;
+            font-size: 20px;
+            position: absolute;
+            top:50px;
+            left:10%;
+    
+        }
+}
+
+.changeNav{
+    background-color:#999;
+    width: 100%;
+    height: auto;
+    background-position: 0 0;
+    background-size: 100% 160%;
+    background-repeat: no-repeat;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 9;
+}   
+.fa-search{
+    cursor: pointer;
+}
+
+.active {
+    right:0;
+    width: 40%;
+}
+.toggle{
+    position: absolute;
+    
+    top: 20px;
+    right:5px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fa-times{
+        font-size:20px;
+        &:hover{
+            color:#BD1B49!important;
+        }
+    }
+}
+
+.header-scroll{
+    background-color: rgba(0,0,0,.8);
+    border-bottom:3px solid #882eea;
+    padding: 6px 10%;
+    .navbar-brand{
+       
+        border:1px solid white;
+    }
+    .fa-search{
+        
+    }
+}
