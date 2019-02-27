@@ -1,36 +1,7 @@
-<!-- Swiper -->
 
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
+
+<ngx-slick class="carousel"  #slickModal="slick-modal" [config]="slideConfig_1">
+    <div ngxSlickItem *ngFor="let phim of dsPhim" class="slide">
+        <app-movie-item [phim]='phim'></app-movie-item>
     </div>
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
-    </div>
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
-    </div>
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
-    </div>
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
-    </div>
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
-    </div>
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
-    </div>
-    <div class="swiper-slide">
-      <app-movie-item></app-movie-item>
-    </div>
-    
-  </div>
-  <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
-   <!-- Add Arrows -->
-   <div class="swiper-button-next"></div>
-   <div class="swiper-button-prev"></div>
-</div>
+</ngx-slick>

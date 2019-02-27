@@ -26,7 +26,8 @@
 
           </ul>
           <span class="py-3">
-            <button class="btn btn--navbar mr-4 ">LOGIN</button>
+            <button class="btn btn--navbar mr-4 " type="button" mdbBtn  gradient="peach" rounded="true" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>LOGIN</button>
+            
             <span><i class="fa fa-search " aria-hidden="true" (click)="toggle_div()"></i></span>
           </span>
       </div>
@@ -45,3 +46,89 @@
 
 
 <!-- END NAVBAR -->
+
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <!-- <h4 class="modal-title w-100" id="myModalLabel" >Sign in</h4> -->
+        <ul class="nav nav-pills mb-3 modal-title w-100" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="pills-signIn-tab myModalLabel" data-toggle="pill" href="#pills-signIn" role="tab" aria-controls="pills-signIn" aria-selected="true">SIGN IN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-signUp-tab myModalLabel" data-toggle="pill" href="#pills-signUp" role="tab" aria-controls="pills-signUp" aria-selected="false">SIGN UP</a>
+            </li>
+            
+          </ul>
+      </div>
+
+      <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-signIn" role="tabpanel" aria-labelledby="pills-signIn-tab">
+              <div class="modal-body">
+                  <form [formGroup]="elegantForm" [formGroup]="validatingForm">
+                    <div class="md-form">
+                      <input type="email" id="elegantFormEmailEx" class="form-control" formControlName="elegantFormEmailEx" mdbInput mdbValidate >
+                      <label for="elegantFormEmailEx">Your email</label>
+                    </div>
+          
+                    <div class="md-form pb-1">
+                      <input type="password" id="elegantFormPasswordEx" formControlName="elegantFormPasswordEx" class="form-control" mdbInput>
+                      <label for="elegantFormPasswordEx">Your password</label>
+                      <p class="font-small blue-text d-flex justify-content-end">Forgot
+                        <a href="#" class="blue-text ml-1"> Password?</a>
+                      </p>
+                    </div>
+                  </form>
+                  <div class="text-center mb-3">
+                    <button type="button" mdbBtn gradient="blue" block="true" rounded="true" class="z-depth-1a waves-light" mdbWavesEffect>Sign In</button>
+                  </div>
+                  
+                 
+                </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-signUp" role="tabpanel" aria-labelledby="pills-signUp-tab">
+              <div class="modal-body">
+                  <form [formGroup]="elegantForm">
+                    <div class="md-form">
+                      <input type="text" id="elegantFormEmailEx" class="form-control" formControlName="elegantFormEmailEx" mdbInput>
+                      <label for="elegantFormEmailEx">Your email</label>
+                    </div>
+          
+                    <div class="md-form pb-1">
+                      <input type="password" id="elegantFormPasswordEx" formControlName="elegantFormPasswordEx" class="form-control" mdbInput>
+                      <label for="elegantFormPasswordEx">Your password</label>
+                      <p class="font-small blue-text d-flex justify-content-end">Forgot
+                        <a href="#" class="blue-text ml-1"> Password?</a>
+                      </p>
+                    </div>
+                  </form>
+                  <div class="text-center mb-3">
+                    <button type="button" mdbBtn gradient="blue" block="true" rounded="true" class="z-depth-1a waves-light" mdbWavesEffect>Sign Up</button>
+                  </div>
+                  
+                 
+                </div>
+          </div>
+          
+      </div>
+      
+      
+        <!--Footer-->
+      <div class="modal-footer mx-5 pt-3 mb-1">
+          <p class="font-small grey-text d-flex justify-content-end">Not a member?
+            <a href="#" class="blue-text ml-1"> Sign up</a>
+          </p>
+      </div>
+  
+    </div>
+  </div>
+</div>
+  
+  
+
+

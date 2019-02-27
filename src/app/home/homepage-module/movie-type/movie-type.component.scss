@@ -1,0 +1,22 @@
+.nav{
+    justify-content: center;
+}
+
+.tab-pane{
+    position: relative;
+        display: block !important;
+        height: 0 !important;
+        div{
+            height: 0 !important;
+           
+        }
+        &.active{
+            height: auto !important;
+            div{
+                height: auto !important;
+              
+            }
+        }
+        
+        
+}

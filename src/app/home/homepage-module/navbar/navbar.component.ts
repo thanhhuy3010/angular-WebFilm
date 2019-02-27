@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import $ from 'jquery';
 declare var $:any;
 
@@ -8,8 +10,14 @@ declare var $:any;
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  elegantForm: FormGroup;
 
-  constructor() { }
+  constructor(public fb: FormBuilder) {
+    this.elegantForm = fb.group({
+      elegantFormEmailEx: ['', [Validators.required, Validators.email]],
+      elegantFormPasswordEx: ['', Validators.required],
+    });
+  }
 
   ngOnInit() {
     $(document).ready(function(){
@@ -34,6 +42,6 @@ export class NavbarComponent implements OnInit {
     ele.classList.toggle('active');
   };
   
-  
+ 
 
 }

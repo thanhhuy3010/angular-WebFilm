@@ -11,7 +11,7 @@ import { HomepageLayoutComponent } from './homepage-module/homepage-layout/homep
     CommonModule,
     HomepageModuleModule,
     DetailfilmModuleModule,
-    TicketBookingModuleModule
+    TicketBookingModuleModule,
   ],
   exports: [
     HomepageLayoutComponent

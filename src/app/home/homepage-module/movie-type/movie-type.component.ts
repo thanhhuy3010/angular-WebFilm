@@ -7,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieTypeComponent implements OnInit {
 
+  playingStatus:boolean = true;
+
   constructor() { }
 
+  showPlaying(){
+    this.playingStatus=true;
+  }
+  showCommingSoon(){
+    this.playingStatus=false;
+  }
   ngOnInit() {
   }
 
