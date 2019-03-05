@@ -1,0 +1,18 @@
+.body_detailFilm{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .Gradient{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    .posterFilm{
+        width: 101%;
+        filter: blur(13px)    ;
+        -webkit-filter: blur(13px)    ;
+        margin: -11px 0 -5px -10px;
+}
+}
