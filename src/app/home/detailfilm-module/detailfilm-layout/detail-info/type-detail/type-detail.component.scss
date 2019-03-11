@@ -1,0 +1,28 @@
+.showTimeMain{
+    width: 100%;
+    // background: rgb(255, 255, 255);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    // .option_Cinema{
+    //     .cinemaChoosen{
+    //         display: flex;
+    //     }
+    // }
+    .headerShowTime{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .option_Cinema{
+            display: flex;
+            align-items: center;
+            .cinemaChoosen{
+                margin: auto;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

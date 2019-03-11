@@ -13,7 +13,12 @@ export class MovieService {
   }
 
   LayDanhSachPhim():Observable<any[]>{
-    const api:string = `http://sv2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP05`;
+    const api:string = `http://sv2.myclass.vn/api/QuanLyPhim/LayDanhSachPhim?MaNhom=GP01`;
+    let observable:any = this.http.get(api);
+    return observable;
+  }
+  getDetailFilm(filmID:string):Observable<any[]>{
+    const api:string = `http://sv2.myclass.vn/api/QuanLyPhim/LayChiTietPhim?MaPhim=${filmID}`;
     let observable:any = this.http.get(api);
     return observable;
   }

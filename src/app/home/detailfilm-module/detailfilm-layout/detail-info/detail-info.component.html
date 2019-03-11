@@ -1,36 +1,58 @@
-<div class="detail_header">
-  <div class="mainHeader">
+<div class="detail_header container">
+  <div class="mainHeader row ">
     <!-- poster -->
     <div class="col-sm-3 col-xs-4 filmPoster">
       <div class="row">
-        <img ng-src="https://s3img.vcdn.vn/mobile/123phim/2019/01/hai-phuong-15475430043621_220x310.jpg" alt="Loading..." src="https://s3img.vcdn.vn/mobile/123phim/2019/01/hai-phuong-15475430043621_220x310.jpg">
-
+        <img ng-src="movie.HinhAnh"
+          alt="Loading..." [src]="movie.HinhAnh">
       </div>
     </div>
-
     <!-- Info -->
-    <div class="infoFilm col-sm-5">
+    <div class="infoFilm col-sm-7">
       <div>
-        <span class="detailInfoFilm">
-          XX/MM/YYYY
+        <span class="detailInfoFilm text-light">
+          {{movie.NgayKhoiChieu}}
         </span>
       </div>
       <div class="parentInfo2">
         <span class="detailMainInfo2">
-          <!-- ngIf: filmDetail.film_age >= 13 --><span class="ageType">C16</span>
-          <!-- end ngIf: filmDetail.film_age >= 13 --><span class="filmName">NAME FILM</span></span>
+          <span class="ageType text-light">C16</span>
+          <span class="filmName text-light">{{movie.TenPhim}}</span>
+        </span>
       </div>
       <div>
-        <span class="detailMainInfo1 ">90 phút - 0 IMDb - </span><br>
+        <span class="detailMainInfo1 text-light">90 phút - 0 IMDb</span><br>
       </div>
-      <button class="btnBuyTicketDetail btn btn-default" ng-click="buyTicket()"
-      ng-if="filmDetail.has_session === 1">Mua vé</button>
+      <button class="btnBuyTicketDetail text-light btn btn-danger">Mua vé</button>
     </div>
 
+    <div class="col-sm-2 circleStar">
+        <div class="circlePersent p92">
+          <div class="circleBorder">
+          </div>
+          <span class="number">9.2</span>
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+        </div>
 
+        <!-- DANH GIA SAO -->
+        <!-- <div class="row star" style="margin-top: 10px">
+        </div> -->
+        <div class="row" style="margin-top: 10px">
+          <span class="detailMainInfo1" style="margin: auto ; color: white">739 người đánh giá</span>
+        </div>
+    </div>
+    
   </div>
+<br>
 </div>
-
-
-
+<div class="navCenter container">
+    <div class="headerNavcenter">
+      <div class="container text-center">
+          <app-type-detail></app-type-detail>
+      </div>
+    </div>
+  </div>
 

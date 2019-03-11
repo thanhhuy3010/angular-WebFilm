@@ -4,4 +4,88 @@
     width: 100%;
     left: 50%;
     transform: translate3d(-50%,-50%,0);
+    max-width: 870px;
+    float: none;
+    margin: auto;
+    clear: both;
+    .filmPoster{
+        img{
+            border-radius: 5px    ;
+            -webkit-border-radius: 5px    ;
+            -moz-border-radius: 5px    ;
+            -ms-border-radius: 5px    ;
+            -o-border-radius: 5px    ;    
+        }
+    }
+    .infoFilm{
+        float: none;
+        clear: both;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25%;
+
+        .ageType{
+            background: rgb(165, 60, 60);
+            padding: 2px 10px 2px 10px;
+            margin-right: 5px;
+            border-radius: 5px        ;
+            -webkit-border-radius: 5px        ;
+            -moz-border-radius: 5px        ;
+            -ms-border-radius: 5px        ;
+            -o-border-radius: 5px        ;
+        }
+        .btnBuyTicketDetail{
+            
+        }
+    }
+    .circleStar{
+        position: absolute;
+        text-align: center;
+        transform: translateY(-50%);
+        right: 0;
+        top:50%;
+
+        .circlePersent{
+            position: relative;
+            height: 115px;
+            width: 115px;
+            top: 50%;
+            margin: auto;
+            background: rgba(99, 96, 96, 0.687);
+            font-size: 60px;
+            border-radius: 100%        ;
+            -webkit-border-radius: 100%        ;
+            -moz-border-radius: 100%        ;
+            -ms-border-radius: 100%        ;
+            -o-border-radius: 100%        ;
+            .circleBorder{
+                position: absolute;
+                width: 115px;
+                height: 115px;
+                border: 7.5px solid #3a3a3a;
+                border-radius:         50%;
+                -webkit-border-radius:         50%;
+                -moz-border-radius:         50%;
+                -ms-border-radius:         50%;
+                -o-border-radius:         50%;
+            }
+            .number{
+                position: absolute;
+                display: block;
+                width: 100%;
+                z-index: 1;
+                top:0;
+                left: 0;
+                line-height: 110px;
+                color: white;
+                white-space: nowrap;
+            }
+        }
+
+    }
+}
+.navCenter{
+    color: aliceblue;
+    position: relative;
 }
