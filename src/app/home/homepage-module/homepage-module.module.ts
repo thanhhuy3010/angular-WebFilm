@@ -18,6 +18,10 @@ import { SlickModule } from 'ngx-slick';
 import { MdbootstrapModule } from 'src/app/_core/common/shareModule/mdbootstrap/mdbootstrap.module';
 import {  FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+
+
 
 
 @NgModule({
@@ -32,7 +36,7 @@ import { NgModule } from '@angular/core';
     QuickBookingComponent, 
     NewsComponent, 
     ReviewMovieComponent, 
-    BlogMovieComponent, PromotionComponent, FooterComponent],
+    BlogMovieComponent, PromotionComponent, FooterComponent, SigninComponent, SignupComponent],
   
   imports: [
     CommonModule,SlickModule,MdbootstrapModule, FormsModule 
@@ -48,7 +52,10 @@ import { NgModule } from '@angular/core';
     QuickBookingComponent,
     NewsComponent, 
     ReviewMovieComponent, 
-    BlogMovieComponent
+    BlogMovieComponent,
+    FooterComponent,
+    SigninComponent,
+    SignupComponent
   ]
 })
 export class HomepageModuleModule { }

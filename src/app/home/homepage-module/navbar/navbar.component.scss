@@ -1,16 +1,24 @@
 .navbar{
-    
-    
+    box-shadow: none;
     width: 100%;
     font-size:20px;
     padding:20px 10%;
-
     position: fixed;
     top:0;
     left:0;
     z-index: 10;
     transition:all 0.5s;
-
+        
+    -webkit-transition:all 0.5s;
+    -moz-transition:all 0.5s;
+    -ms-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    background-color: rgba(0,0,0,.4);
+    
+    @media screen and (max-width:992px) {
+        background-color: rgba(0,0,0,.8);
+        
+    }
     .nav-item{
         padding: 0.5rem 1rem;
     }
@@ -25,10 +33,11 @@
         padding: 5px 10px;
     }
     .nav-link{
-        color:white
+        color:white;
+        font-weight: 600
     }
     .navbar-nav{
-        margin: 0 18%;
+        margin: 0 12%;
     }
     .fa-search{
         color:white;
@@ -36,7 +45,7 @@
     @media screen and (max-width:992px) {
         .mobileMenu{
             position: fixed;
-            top: 9px;
+            top: 34px;
             bottom:0;
             left:0;
             margin:auto;

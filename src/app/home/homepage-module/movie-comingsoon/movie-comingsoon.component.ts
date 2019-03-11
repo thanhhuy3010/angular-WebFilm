@@ -24,7 +24,7 @@ export class MovieComingsoonComponent implements OnInit  {
     // this.dsPhim = this.phimService.LayDanhSachPhim();
     this.subServiceLayDanhSachPhim = this.movieService.LayDanhSachPhim().subscribe((mangPhim:Phim[])=>{
       this.dsPhim = mangPhim;
-      console.log(this.dsPhim);
+      
       
     })
   }
