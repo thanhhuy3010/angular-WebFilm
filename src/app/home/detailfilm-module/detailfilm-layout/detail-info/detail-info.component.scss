@@ -1,7 +1,23 @@
 .detail_header{
     position: absolute;
-    top: 50%;
+    top: 30%;
     width: 100%;
     left: 50%;
     transform: translate3d(-50%,-50%,0);
+    
+    .mainHeader{
+        padding: 0 20%;
+        @media screen and (max-width:576px){
+            padding: 0 9%;
+            
+        }
+        @media screen and (max-width:768px){
+            padding: 0 14%;
+            
+        }
+    }
+    @media screen and (max-width:576px){
+        top:48%;
+
+    }
 }

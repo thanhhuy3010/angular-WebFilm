@@ -5,18 +5,41 @@ import { DetailfilmModuleModule } from './detailfilm-module/detailfilm-module.mo
 import { TicketBookingModuleModule } from './ticket-booking-module/ticket-booking-module.module';
 import { HomepageLayoutComponent } from './homepage-module/homepage-layout/homepage-layout.component';
 import { DetailfilmLayoutComponent } from './detailfilm-module/detailfilm-layout/detailfilm-layout.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { TicketBookingLayoutComponent } from './ticket-booking-module/ticket-booking-layout/ticket-booking-layout.component';
+
+
+const homeRoutes:Routes =[
+    {path:'',component:HomeLayoutComponent,children:[
+      {path:'',component:HomepageLayoutComponent},
+      {path:'trangchu',component:HomepageLayoutComponent},
+      {path:'chitietphim',component:DetailfilmLayoutComponent},
+      {path:'datve',component:TicketBookingLayoutComponent},
+    ]
+    }
+   
+  
+    
+  
+  
+
+]
 
 @NgModule({
-  declarations: [],
+  declarations: [HomeLayoutComponent],
   imports: [
     CommonModule,
     HomepageModuleModule,
     DetailfilmModuleModule,
     TicketBookingModuleModule,
+    
+    RouterModule.forChild(homeRoutes)
   ],
   exports: [
     HomepageLayoutComponent,
-    DetailfilmLayoutComponent
+    DetailfilmLayoutComponent,
+    HomeLayoutComponent
   ]
   
 })

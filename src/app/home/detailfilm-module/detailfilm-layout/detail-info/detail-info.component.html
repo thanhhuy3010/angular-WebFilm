@@ -1,31 +1,23 @@
 <div class="detail_header">
   <div class="mainHeader">
-    <!-- poster -->
-    <div class="col-sm-3 col-xs-4 filmPoster">
-      <div class="row">
-        <img ng-src="https://s3img.vcdn.vn/mobile/123phim/2019/01/hai-phuong-15475430043621_220x310.jpg" alt="Loading..." src="https://s3img.vcdn.vn/mobile/123phim/2019/01/hai-phuong-15475430043621_220x310.jpg">
-
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-xs-6">
+        <img class="img-fluid" alt="Loading..." src="https://s3img.vcdn.vn/mobile/123phim/2019/01/hai-phuong-15475430043621_220x310.jpg">
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-6 text-white">
+        <h3 >Phim</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut facere autem cum distinctio iure eum accusantium suscipit inventore velit totam!</p>
+        <p>Thể loại :</p>
+        <p>Thời lượng :</p>
+        <p>Ngày chiếu :</p>
+        
+        <button mdbBtn type="button" gradient="aqua" rounded="true" mdbWavesEffect>Trailer</button>
+        <button mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect>Mua vé</button>
       </div>
     </div>
+       
 
-    <!-- Info -->
-    <div class="infoFilm col-sm-5">
-      <div>
-        <span class="detailInfoFilm">
-          XX/MM/YYYY
-        </span>
-      </div>
-      <div class="parentInfo2">
-        <span class="detailMainInfo2">
-          <!-- ngIf: filmDetail.film_age >= 13 --><span class="ageType">C16</span>
-          <!-- end ngIf: filmDetail.film_age >= 13 --><span class="filmName">NAME FILM</span></span>
-      </div>
-      <div>
-        <span class="detailMainInfo1 ">90 phút - 0 IMDb - </span><br>
-      </div>
-      <button class="btnBuyTicketDetail btn btn-default" ng-click="buyTicket()"
-      ng-if="filmDetail.has_session === 1">Mua vé</button>
-    </div>
+    
 
 
   </div>

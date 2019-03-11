@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { NgForm } from '@angular/forms';
+
+
 import $ from 'jquery';
+
 declare var $:any;
 
 @Component({
@@ -10,13 +11,10 @@ declare var $:any;
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  elegantForm: FormGroup;
-
-  constructor(public fb: FormBuilder) {
-    this.elegantForm = fb.group({
-      elegantFormEmailEx: ['', [Validators.required, Validators.email]],
-      elegantFormPasswordEx: ['', Validators.required],
-    });
+  
+  
+  constructor() {
+   
   }
 
   ngOnInit() {
@@ -27,7 +25,7 @@ export class NavbarComponent implements OnInit {
     });
     
     $(window).scroll(function(){
-      if($(window).scrollTop() > $('#carouselId').position().top){
+      if($(window).scrollTop() > 100){
           $('.navbar').addClass('header-scroll')
       }
       else{
@@ -43,5 +41,6 @@ export class NavbarComponent implements OnInit {
   };
   
  
+
 
 }
