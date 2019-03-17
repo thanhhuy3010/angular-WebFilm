@@ -13,7 +13,7 @@ import { ReviewMovieComponent } from './review-movie/review-movie.component';
 import { BlogMovieComponent } from './blog-movie/blog-movie.component';
 import { PromotionComponent } from './promotion/promotion.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { Routes, RouterModule } from '@angular/router';
 import { SlickModule } from 'ngx-slick';
 import { MdbootstrapModule } from 'src/app/_core/common/shareModule/mdbootstrap/mdbootstrap.module';
 import {  FormsModule } from '@angular/forms';
@@ -39,7 +39,8 @@ import { SignupComponent } from './signup/signup.component';
     BlogMovieComponent, PromotionComponent, FooterComponent, SigninComponent, SignupComponent],
   
   imports: [
-    CommonModule,SlickModule,MdbootstrapModule, FormsModule 
+    CommonModule,SlickModule,MdbootstrapModule, FormsModule ,
+    RouterModule
   ],
   exports: [
     HomepageLayoutComponent, 

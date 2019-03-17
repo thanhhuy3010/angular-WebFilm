@@ -20,7 +20,7 @@ export class NguoidungService {
   }
 
   public DangKy(nguoiDung:NguoiDung):Observable<any>{
-    let apiDangKy:string = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung    `;
+    let apiDangKy:string = `http://svcy3.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung    `;
     let header = new HttpHeaders();
     header.append('Content-Type','application/json;charset=UTF-8');
     let observable = this.http.post(apiDangKy,nguoiDung, {headers:header});

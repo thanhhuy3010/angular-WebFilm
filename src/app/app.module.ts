@@ -7,6 +7,7 @@ import { HomeModule } from './home/home.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { Routes, RouterModule } from '@angular/router';
 import { ModalTrailerModule } from './_core/common/shareModule/modal-trailer/modal-trailer.module';
+import { AdminModule } from './admin/admin.module';
 
 const appRoutes:Routes = [
   {path:'',loadChildren:'./home/home.module#HomeModule'},
@@ -20,6 +21,7 @@ const appRoutes:Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AdminModule,
     HomeModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),

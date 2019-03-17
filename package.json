@@ -31,12 +31,8 @@
     "jquery": "^3.3.1",
     "ngx-slick": "^0.2.1",
     "popper.js": "^1.14.7",
-<<<<<<< HEAD
-    "rxjs": "^6.3.3",
-=======
     "rxjs": "~6.3.3",
     "sweetalert2": "^8.2.6",
->>>>>>> 6d01a86c3d7890fd2153a11e4c5ccba7bf16a4cf
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

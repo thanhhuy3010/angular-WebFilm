@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { NguoidungService } from 'src/app/_core/services/nguoidung.service';
 import { NguoiDung } from 'src/app/_core/models/nguoiDung';
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent implements OnInit,OnDestroy {
 
   @ViewChild("formDangKy") formDangKy:NgForm;
 
@@ -54,6 +54,12 @@ export class SignupComponent implements OnInit {
     }
     this.formDangKy.control.setErrors({'loiMatKhau':false});
     return false;
+  }
+  ngOnDestroy():void{
+    if(this.subService)
+    {
+      this.subService.unsubscribe();
+    }
   }
 
 }

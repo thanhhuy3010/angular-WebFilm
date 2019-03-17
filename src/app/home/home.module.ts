@@ -8,6 +8,10 @@ import { DetailfilmLayoutComponent } from './detailfilm-module/detailfilm-layout
 import { Routes, RouterModule } from '@angular/router';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { TicketBookingLayoutComponent } from './ticket-booking-module/ticket-booking-layout/ticket-booking-layout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MovieTypeComponent } from './homepage-module/movie-type/movie-type.component';
+import { MovieItemComponent } from './homepage-module/movie-item/movie-item.component';
+import { DetailInfoComponent } from './detailfilm-module/detailfilm-layout/detail-info/detail-info.component';
 
 
 const homeRoutes:Routes =[
@@ -34,7 +38,7 @@ const homeRoutes:Routes =[
     DetailfilmModuleModule,
     TicketBookingModuleModule,
     
-    RouterModule.forChild(homeRoutes)
+    RouterModule.forChild(homeRoutes),HttpClientModule
   ],
   exports: [
     HomepageLayoutComponent,
