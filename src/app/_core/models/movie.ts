@@ -7,7 +7,7 @@ export class Phim{
     NgayKhoiChieu:string;
     DanhGia:number;
     HinhAnh:string;
-
+    LichChieu:any[] = [];
     constructor(){
 
     }

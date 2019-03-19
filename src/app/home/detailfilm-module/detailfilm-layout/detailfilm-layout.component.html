@@ -1,7 +1,7 @@
 <div class="detailComponent" style="background-color: rgb(10, 32, 41);">
    <div class="col-xs-12">
       <div class="body_detailFilm container-fluid" style="background:rgb(10, 32, 41)">
-         <img src="https://s3img.vcdn.vn/123phim/2019/02/hai-phuong-15504028026287.jpg" class="posterFilm ">
+         <img [src]="phim.HinhAnh" width="100%" height="650px" class="posterFilm ">
          <div class="Gradient"></div>
          <!-- - app-detail-info  -->
          <div class="detailMainInfo mainMaxWidth2">
@@ -9,16 +9,15 @@
                <div class="col-md-6 col-sm-12 col-xs-6 filmPosterTop">
                   <div class="row">
                      <img alt="Loading..." class="img-fluid"
-                        src="https://s3img.vcdn.vn/mobile/123phim/2019/01/hai-phuong-15475430043621_220x310.jpg">
+                        [src]="phim.HinhAnh">
                   </div>
                </div>
                <div class="col-md-6 col-sm-12 col-xs-6 text-white infoMain">
-                  <h3>Phim</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut facere autem cum distinctio iure eum
-                     accusantium suscipit inventore velit totam!</p>
-                  <p>Thể loại :</p>
-                  <p>Thời lượng :</p>
-                  <p>Ngày chiếu :</p>
+                  <h3 style="color:#CF70D5"><strong>{{phim.TenPhim}}</strong></h3>
+                  <p>{{phim.MoTa}}</p>
+                  <!-- <p>Thể loại : {{phim.MaNhom}} </p> -->
+                  <p>Đánh Giá: {{phim.DanhGia}} </p>
+                  <p>Ngày chiếu : {{phim.NgayKhoiChieu | date: 'dd-MM-yyyy'}}</p>
                   <div class="buttonGroup">
                      <button class="btn btn-danger mr-3" mdbBtn type="button" gradient="aqua" rounded="true"
                         mdbWavesEffect>Trailer</button>

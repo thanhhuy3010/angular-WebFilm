@@ -20,13 +20,13 @@ export class MovieService {
   }
 
   LayChiTietPhim(maPhim:string):Observable<any[]>{
-    const api:string = `http://sv2cy.myclass.vn/api/QuanLyPhim/LayChiTietPhim?MaPhim=${maPhim}`;
+    const api:string = `http://svcy2.myclass.vn/api/QuanLyPhim/LayChiTietPhim?MaPhim=${maPhim}`;
     let observable:any= this.http.get(api);
     return observable;// observable chứa dữ liệu từ sever trả về 
   }
 
   LayChiTietPhongVe(maLichChieu:string):Observable<any[]>{
-    const api:string = `http://sv2cy.myclass.vn/api/QuanLyPhim/ChiTietPhongVe?MaPhim=${maLichChieu}`;
+    const api:string = `http://svcy2.myclass.vn/api/QuanLyPhim/ChiTietPhongVe?MaPhim=${maLichChieu}`;
     let observable:any= this.http.get(api);
     return observable;// observable chứa dữ liệu từ sever trả về 
   }

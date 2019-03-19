@@ -1,20 +1,23 @@
-<div class="box">
-      <div class="imgBox">
-            <img [src]="phim.HinhAnh" alt="Card image" class="img-fluid" />
+<a (click)="xemChiTiet()" [routerLink]="['/chitietphim',phim.MaPhim]">
+      <div class="box">
+            <div class="imgBox">
+                  <img [src]="phim.HinhAnh" alt="Card image" class="img-fluid" />
+            </div>
+            <div class="button_box">
+      
+                  <button mdbBtn class="mr-2 button" type="button" gradient="aqua" rounded="true" mdbWavesEffect routerLink='/chitietphim' >Trailer</button>
+                  <button class="px-3 button" mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect routerLink='/chitietphim'>Mua vé</button>
+      
+      
+                  
+            </div>
+            <div class="details">
+                  <h5>{{phim.TenPhim}}</h5>
+                 
+            </div>
       </div>
-      <div class="button_box">
-
-            <button mdbBtn class="mr-2 button" type="button" gradient="aqua" rounded="true" mdbWavesEffect routerLink='/chitietphim' >Trailer</button>
-            <button class="px-3 button" mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect routerLink='/chitietphim'>Mua vé</button>
-
-
-            
-      </div>
-      <div class="details">
-            <h5>{{phim.TenPhim}}</h5>
-           
-      </div>
-</div>
+      
+</a>
 
 
 
