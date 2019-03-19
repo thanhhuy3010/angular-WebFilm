@@ -4,6 +4,7 @@ import { AdminTemplateComponent } from './admin-template/admin-template.componen
 import { QuanLyNguoiDungComponent } from './quan-ly-nguoi-dung/quan-ly-nguoi-dung.component';
 import { TicketRoomComponent } from './ticket-room/ticket-room.component';
 import {Routes,RouterModule} from '@angular/router';
+import { QuanLyPhimComponent } from './quan-ly-phim/quan-ly-phim.component';
 
 const adminRoute:Routes = [
   {path:'admin', component:AdminTemplateComponent,children:[
@@ -15,7 +16,7 @@ const adminRoute:Routes = [
 ]
 
 @NgModule({
-  declarations: [AdminTemplateComponent, QuanLyNguoiDungComponent, TicketRoomComponent],
+  declarations: [AdminTemplateComponent, QuanLyNguoiDungComponent, TicketRoomComponent, QuanLyPhimComponent],
   imports: [
     CommonModule,RouterModule.forChild(adminRoute)
   ]
