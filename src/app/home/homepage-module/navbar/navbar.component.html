@@ -10,7 +10,7 @@
       </button>
 
 
-      <div class="collapse navbar-collapse d-flex  flex-column flex-lg-row flex-xl-row justify-content-lg-end p-3
+      <div class="collapse navbar-collapse d-flex  flex-column flex-lg-row flex-xl-row justify-content-lg-around p-3
                   p-lg-0 mt-5 mt-lg-0 mobileMenu onRight" 
            id="collapsibleNavId">
           <ul class="navbar-nav align-seft-stretch">
@@ -26,7 +26,13 @@
 
           </ul>
           <span >
-            <button class="btn btn--navbar mr-4 " type="button" mdbBtn  gradient="peach" rounded="true" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>LOGIN</button>
+            
+                <button *ngIf="!checkLogin; else avatarUSER" class="btn btn--navbar mr-4 " type="button" mdbBtn  gradient="peach" rounded="true" class="relative waves-light" (click)="basicModal.show()" mdbWavesEffect>LOGIN</button>
+                <ng-template #avatarUSER>
+                    <i class="fa fa-user fa-lg text-light"></i>
+                    <span class="text-light">Hello!</span>
+                </ng-template>
+           
             
             <span><i class="fa fa-search " aria-hidden="true" (click)="toggle_div()"></i></span>
           </span>

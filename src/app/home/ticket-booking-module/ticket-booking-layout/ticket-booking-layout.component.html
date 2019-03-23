@@ -1,3 +1,40 @@
-<p>
-  ticket-booking-layout works!
-</p>
+<!-- <div class="container mt-5 mainDSGhe">
+  <div class="space"></div>
+  <div class="row controllerPicker">
+    <div class="header text-center">
+      <h1>danh sách ghế</h1>
+    </div>
+    <div class="row listSeat">
+      <div class="BuyTicketBox">
+        <h4>Buy Tickets</h4>
+        <h5>Seat</h5>
+        <h6>Screen</h6>
+        <div class="ticketTable">
+
+          <div>
+            <app-ghe *ngFor="let ghe of DSGhe"></app-ghe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div> -->
+<div class="mainListSeat">
+  <div class="space"></div>
+
+  <div class="container p-4">
+    <h4>Buy Tickets</h4>
+    <h5>Seat</h5>
+    <h6>Screen</h6>
+    <div class="row container">
+
+      <div class="col-xl-6 pl-5 mx-auto">
+        <app-ghe *ngFor="let ghe of DSGhe"></app-ghe>
+      </div>
+    </div>
+  </div>
+</div>

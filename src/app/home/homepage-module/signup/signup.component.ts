@@ -30,8 +30,8 @@ export class SignupComponent implements OnInit,OnDestroy {
 
 
   DangKy(thongTinNguoiDung:NguoiDung){
-    thongTinNguoiDung.MaNhom="GP01";
-    thongTinNguoiDung.MaLoaiNguoiDung="KhachHang";
+    thongTinNguoiDung.MaNhom="GP05";
+    thongTinNguoiDung.MaLoaiNguoiDung="admin";
     this.subService = this.nguoiDungSer.DangKy(thongTinNguoiDung).subscribe((result)=>{
       console.log(result);
       

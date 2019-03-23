@@ -9,7 +9,6 @@ export class GheComponent implements OnInit {
   @Input() ghe:any = {};
   dangDat: boolean = false;
 
-
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +16,10 @@ export class GheComponent implements OnInit {
   }
   DatGhe(){
     this.dangDat = !this.dangDat;
+    if(this.ghe.status == false){
+      
+    }
+
   }
 
 }

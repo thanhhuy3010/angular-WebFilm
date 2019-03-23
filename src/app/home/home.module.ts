@@ -9,25 +9,21 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { TicketBookingLayoutComponent } from './ticket-booking-module/ticket-booking-layout/ticket-booking-layout.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieTypeComponent } from './homepage-module/movie-type/movie-type.component';
-import { MovieItemComponent } from './homepage-module/movie-item/movie-item.component';
-import { DetailInfoComponent } from './detailfilm-module/detailfilm-layout/detail-info/detail-info.component';
+// import { MovieTypeComponent } from './homepage-module/movie-type/movie-type.component';
+// import { MovieItemComponent } from './homepage-module/movie-item/movie-item.component';
+// import { DetailInfoComponent } from './detailfilm-module/detailfilm-layout/detail-info/detail-info.component';
+// import { QuickBookingComponent } from './homepage-module/quick-booking/quick-booking.component';
 
 
 const homeRoutes:Routes =[
     {path:'',component:HomeLayoutComponent,children:[
       {path:'',component:HomepageLayoutComponent},
-      {path:'trangchu',component:HomepageLayoutComponent},
+      {path:'trangchu',component:HomepageLayoutComponent},  
       {path:'chitietphim',component:DetailfilmLayoutComponent},
-      {path:'datve',component:TicketBookingLayoutComponent},
+      // {path:'datvenhanh',component:QuickBookingComponent},
+      {path:'booking',component:TicketBookingLayoutComponent}
     ]
     }
-   
-  
-    
-  
-  
-
 ]
 
 @NgModule({

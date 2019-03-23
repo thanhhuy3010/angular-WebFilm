@@ -12,6 +12,7 @@ import { AdminModule } from './admin/admin.module';
 const appRoutes:Routes = [
   {path:'',loadChildren:'./home/home.module#HomeModule'},
   {path:'home',loadChildren:'./home/home.module#HomeModule'},
+  // {path:'admin',loadChildren:'./admin/admin.module#AdminModule'}
 ]
 
 @NgModule({

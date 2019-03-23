@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 
 import $ from 'jquery';
-
+import { AuthService } from 'src/app/_core/services/auth.service';
+import { userLogin } from 'src/app/_core/models/userLogin';
 declare var $:any;
 
 @Component({
@@ -11,9 +12,9 @@ declare var $:any;
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  
-  
-  constructor() {
+  uslogin:any = userLogin;
+  checkLogin: boolean = false;
+  constructor(private authSV: AuthService) {
    
   }
 
@@ -32,7 +33,13 @@ export class NavbarComponent implements OnInit {
           $('.navbar').removeClass('header-scroll')
       }
     })
-
+    this.authSV.KiemTraDangNgap();
+    if(this.authSV.checkLoginUser == false){
+      this.checkLogin = false;
+    } else{
+      this.checkLogin = true;
+    }
+    
   }
 
   toggle_div() {

@@ -19,8 +19,15 @@ export class NguoidungService {
     return observable;
   }
 
+
+  LoginNguoiDung(user: NguoiDung){
+    let urlDangNhap = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/DangNhap?taikhoan=${user.TaiKhoan}&matkhau=${user.MatKhau}`;
+    let observable: Observable<any> = this.http.post(urlDangNhap,user);
+    return observable;
+  }
+
   public DangKy(nguoiDung:NguoiDung):Observable<any>{
-    let apiDangKy:string = `http://svcy3.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung    `;
+    let apiDangKy:string = `http://svcy2.myclass.vn/api/QuanLyNguoiDung/ThemNguoiDung`;
     let header = new HttpHeaders();
     header.append('Content-Type','application/json;charset=UTF-8');
     let observable = this.http.post(apiDangKy,nguoiDung, {headers:header});
@@ -28,11 +35,14 @@ export class NguoidungService {
   }
   
   public DangNhap(userLogin:userLogin):Observable<any>{
-    let apiDangNhap:string = `http://svcy3.myclass.vn/api/quanlynguoidung/DangNhap`;
+    let apiDangNhap:string = `http://svcy2.myclass.vn/api/quanlynguoidung/DangNhap`;
     let header = new HttpHeaders();
     header.append('Content-Type','application/json;charset=UTF-8');
     let observable = this.http.post(apiDangNhap, userLogin, {headers:header});
     return observable;
+  }
+  DangXuat():void{
+    localStorage.removeItem('localNguoiDung');
   }
 
 }
