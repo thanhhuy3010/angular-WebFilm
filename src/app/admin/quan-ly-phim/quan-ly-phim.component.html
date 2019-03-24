@@ -56,7 +56,7 @@
                 [attr.data-moTa]="phim.MoTa"
                 [attr.data-ngayKhoiChieu]="phim.NgayKhoiChieu"
                 [attr.data-DanhGia]="phim.DanhGia"
-              (click)="ChinhSuaPhim(btnChinhSua)"
+              (click)="EditFilm(btnChinhSua)"
               data-toggle="modal" data-target="#ModalCapNhat"
                 ><i class="fa fa-edit"></i></button>
                 <button style="margin-left: 5px " class="btn btn-outline-danger"
@@ -67,7 +67,7 @@
                 [attr.data-moTa]="phim.MoTa"
                 [attr.data-ngayKhoiChieu]="phim.NgayKhoiChieu"
                 [attr.data-DanhGia]="phim.DanhGia"
-              (click)="XoaPhim(phim.MaPhim)"
+              (click)="DelFilm(phim.MaPhim)"
                 ><i class="fa fa-trash-o"></i></button>
               </td>
             </tr>
@@ -152,7 +152,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form #formUpdateFilm="ngForm" (ngSubmit)="CapNhatPhim(formUpdateFilm.value,HinhAnh.files)">
+        <form #formUpdateFilm="ngForm" (ngSubmit)="UpdateFilm(formUpdateFilm.value,HinhAnh.files)">
             <div class="form-group">
                 <label for="">Mã Phim: </label>
                 <input type="text" class="form-control" required #MaPhim="ngModel" name="MaPhim" ngModel readonly>

@@ -49,7 +49,7 @@ export class MovieService {
     let obServe= this.http.delete(urlXoa);
     return obServe;
   }
-  capNhatPhim(phim: any) {
+  CapNhatPhim(phim: any) {
     let urlCapNhat = `http://svcy2.myclass.vn/api/QuanLyPhim/CapNhatPhim`;
     let obServe= this.http.post(urlCapNhat, phim);
     return obServe;

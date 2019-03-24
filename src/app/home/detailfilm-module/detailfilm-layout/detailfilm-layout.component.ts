@@ -10,6 +10,7 @@ import { MovieService } from 'src/app/_core/services/movie.service';
 })
 export class DetailfilmLayoutComponent implements OnInit,OnDestroy {
   phim: Phim = new Phim();
+  
   nofti: string = '';
   subParams:Subscription;
   subServices: Subscription;

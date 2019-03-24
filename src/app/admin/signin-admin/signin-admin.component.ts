@@ -19,12 +19,12 @@ export class SigninAdminComponent implements OnInit {
         if (typeof (kq) == "object") {
           localStorage.setItem('AdminDangNhap', JSON.stringify(kq));
           this.auth.LoginAdmin();
-          this.router.navigate(['admintrangchu/charts']);
+          this.router.navigate(['admin/mainAd']);
         } else {
           alert('tài khoản hoặc mật khẩu không đúng !')
         }
       } else {
-        this.router.navigate(['admin']);
+        this.router.navigate(['adminLog']);
       }
     }, error => {
       console.log(error);

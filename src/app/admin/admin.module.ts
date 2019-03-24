@@ -8,18 +8,24 @@ import { QuanLyPhimComponent } from './quan-ly-phim/quan-ly-phim.component';
 import { SigninAdminComponent } from './signin-admin/signin-admin.component';
 import { FormsModule } from '@angular/forms';
 import { QuanLyTinTucComponent } from './quan-ly-tin-tuc/quan-ly-tin-tuc.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { LoginBaoveService } from '../_core/services/login-baove.service';
 
 const adminRoute:Routes = [
-  {path:'admin', component:SigninAdminComponent,children:[
-    {path:'adminMain', component:AdminTemplateComponent},
+  {
+    path : "adminLog",component:SigninAdminComponent
+  },
+  {path:'admin', component:AdminHomeComponent,canActivate:[LoginBaoveService], children:[
+    {path:'mainAd', component:AdminTemplateComponent},
     {path:'quanlynguoidung',component:QuanLyNguoiDungComponent},
-    {path:'ticketmanageroom',component:TicketRoomComponent}
+    {path:'quanliphim',component:QuanLyPhimComponent},
+    {path : 'adminLog',component:SigninAdminComponent}
   ]}
 
 ]
 
 @NgModule({
-  declarations: [AdminTemplateComponent, QuanLyNguoiDungComponent, TicketRoomComponent, QuanLyPhimComponent, SigninAdminComponent, QuanLyTinTucComponent],
+  declarations: [AdminTemplateComponent, QuanLyNguoiDungComponent, TicketRoomComponent, QuanLyPhimComponent, SigninAdminComponent, QuanLyTinTucComponent,AdminHomeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(adminRoute),
@@ -33,7 +39,8 @@ const adminRoute:Routes = [
     TicketRoomComponent, 
     QuanLyPhimComponent, 
     QuanLyTinTucComponent,
-    SigninAdminComponent
+    SigninAdminComponent,
+    AdminHomeComponent
 
   ]
 })
