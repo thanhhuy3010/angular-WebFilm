@@ -51,20 +51,31 @@
             .listTypeTime{
                 display:table;
                 width: 100%;
-                padding-left: 20px;
+                img{
+                    padding-left: 20px;
+                }
                 .timeShow{
                     padding :0 0;
                     line-height: 1;
                     vertical-align: top;
+                    width: 100%;
+                    margin: auto;
+                    display: flex;
+                    justify-content: space-around;
                     a{
                         color: #417505;
                         float: left;
                         font-size: 26px;
                         font-weight: 500;
-                        color: #417500;
                         margin: 0 5px 15px 0;
                         transition: all .2s;
                         text-decoration: none;
+                        &:hover{
+                            color: #c1dca3d5;
+                            font-size: 28px;
+
+                           
+                        }
                     }
                 }
             }

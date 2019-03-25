@@ -23,7 +23,54 @@
 
 
 </div> -->
-<div class="mainListSeat">
+<div class="template">
+    <div class=" bookingLayout container">
+        <div class="header">
+            <h1>Danh Sách Ghế</h1>
+        </div>
+      <div class="row ticketRoom">
+    
+        <div class="col-md-8">
+            <div class="row ticketBooking">
+                <div class="screen">
+                  <h1>SCREEN</h1>
+                </div>
+              <div class="col-md-6 m-0">
+                  <div class="top">
+                      <div class="item">1</div>
+                      <div class="item">2</div>  
+                      <div class="item">3</div>
+                      <div class="item">4</div>
+                      <div class="item">5</div>
+                      <div class="item">6</div>
+                      <div class="item">7</div>
+                      <div class="item">8</div>
+                      <div class="item">9</div>
+                      <div class="item">10</div>
+                      <div class="item">11</div>
+                      <div class="item">12</div>
+                      <div class="item">13</div>
+                      <div class="item">14</div>
+                      <div class="item">15</div>
+                  </div>
+                <div class="row">
+                    <div *ngFor="let ghe of DSGhe" class="ticketSeatmain">
+                        <app-ghe></app-ghe>
+                    </div>
+                </div>
+          
+              </div>
+            </div>
+        </div>
+      </div>
+    
+    
+    </div>
+</div>
+
+
+
+<!-- <div class="mainListSeat">
   <div class="space"></div>
 
   <div class="container p-4">
@@ -31,10 +78,9 @@
     <h5>Seat</h5>
     <h6>Screen</h6>
     <div class="row container">
-
       <div class="col-xl-6 pl-5 mx-auto">
-        <app-ghe *ngFor="let ghe of DSGhe"></app-ghe>
       </div>
+
     </div>
   </div>
-</div>
+</div> -->

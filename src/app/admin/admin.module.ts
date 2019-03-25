@@ -15,10 +15,10 @@ const adminRoute:Routes = [
   {
     path : "adminLog",component:SigninAdminComponent
   },
-  {path:'admin', component:AdminHomeComponent,canActivate:[LoginBaoveService], children:[
-    {path:'mainAd', component:AdminTemplateComponent},
+  {path:'admin', component:AdminTemplateComponent, canActivate:[LoginBaoveService], children:[
+    {path:'mainAd', component:AdminHomeComponent},
     {path:'quanlynguoidung',component:QuanLyNguoiDungComponent},
-    {path:'quanliphim',component:QuanLyPhimComponent},
+    {path:'quanlyphim',component:QuanLyPhimComponent},
     {path : 'adminLog',component:SigninAdminComponent}
   ]}
 

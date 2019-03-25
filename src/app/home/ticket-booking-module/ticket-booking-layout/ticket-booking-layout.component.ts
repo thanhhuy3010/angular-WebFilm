@@ -56,6 +56,7 @@ export class TicketBookingLayoutComponent implements OnInit {
   public listGheDaChon = [];
   @Input() CancelGhe;
   @Output() pushOutDSghe =new EventEmitter();
+  
   getGhe(variables){
     this.pushOutDSghe.emit(variables);
   }

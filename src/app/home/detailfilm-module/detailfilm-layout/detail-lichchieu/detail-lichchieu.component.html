@@ -1,101 +1,216 @@
+<section class="lichChieu">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center text-white">
+        <h3>Lịch Chiếu</h3>
+      </div>
+    </div>
+    <div class="lichChieu__content">
+      <ul class="nav nav-pills mb-3 myDynamics" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link myLink active" id="pills-galaxy-tab" data-toggle="pill" href="#pills-galaxy" role="tab"
+            aria-controls="pills-home" aria-selected="true">
+            <img src="https://www.galaxycine.vn/website/images/galaxy-logo-mobile.png" width="100px" alt="GALAXY">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link myLink" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+            aria-controls="pills-profile" aria-selected="false">
+            <img src="http://cinestar.com.vn/pictures/moi/9Logo/white-2018.png" width="100px" alt="CINESTAR">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link myLink" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+            aria-controls="pills-contact" aria-selected="false">
+            <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png" width="100px" alt="CGV Cinemas"
+              class="large">
+          </a>
+        </li>
+      </ul>
 
-    <section class="lichChieu">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 text-center text-white">
-              <h3>Lịch Chiếu</h3>
+      <div class="tab-content myTab" id="pills-tabContent">
+        <!-- Galaxy -->
+        <div class="tab-pane fade show active" id="pills-galaxy" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="col-xs-12 Cinemas01">
+            <div class="titleMovieInfo">
+              <img class="movieImage" width="50px"
+                src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-du-15379626329832.jpg">
+              <div class="wrapInfo">
+                <div class="headName">
+                  <h5><strong>GALAXY-Nguyễn Du</strong></h5>
+                </div>
+                <p class="addressInfo"> <span>116 Nguyễn Du, Q.1</span> </p>
+              </div>
+            </div>
+            <div class="listTypeTime">
+              <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
+              <div class="timeShow">
+                <a [routerLink]="['/booking']">13:40</a>
+                <a [routerLink]="['/booking']">14:30</a>
+                <a [routerLink]="['/booking']">15:20</a>
+                <a [routerLink]="['/booking']">17:05</a>
+                <a [routerLink]="['/booking']">17:45</a>
+                <a [routerLink]="['/booking']">18:20</a>
+                <a [routerLink]="['/booking']">19:20</a>
+                <a [routerLink]="['/booking']">20:10</a>
+                <a [routerLink]="['/booking']">20:40</a>
+                <a [routerLink]="['/booking']">22:35</a>
+                <a [routerLink]="['/booking']">23:00</a>
+              </div>
             </div>
           </div>
-          <div class="lichChieu__content">
-            <ul class="nav nav-pills mb-3 myDynamics" id="pills-tab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link myLink active" id="pills-galaxy-tab" data-toggle="pill" href="#pills-galaxy" role="tab"
-                  aria-controls="pills-home" aria-selected="true">
-                  <img src="https://www.galaxycine.vn/website/images/galaxy-logo-mobile.png" width="100px" alt="GALAXY">
-                </a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link myLink" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                  aria-controls="pills-profile" aria-selected="false">
-                  <img src="http://cinestar.com.vn/pictures/moi/9Logo/white-2018.png" width="100px" alt="CINESTAR">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link myLink" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                  aria-controls="pills-contact" aria-selected="false">
-                  <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png" width="100px" alt="CGV Cinemas"
-                    class="large">
-                </a>
-              </li> -->
-            </ul>
-      
-            <div class="tab-content myTab" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-galaxy" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="col-xs-12 Cinemas01">
-                  <div class="titleMovieInfo">
-                    <img class="movieImage" width="50px"
-                      src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-du-15379626329832.jpg">
-                    <div class="wrapInfo">
-                      <div class="headName">
-                        <p><strong>GALAXY-Nguyễn Du</strong></p>
-                      </div>
-                      <p class="addressInfo"> <span>116 Nguyễn Du, Q.1</span> </p>
-                    </div>
-                  </div>
-                  <div class="listTypeTime">
-                    <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
-                    <div class="timeShow">
-                      <a href="">13:40</a>
-                      <a href="">14:30</a>
-                      <a href="">15:20</a>
-                      <a href="">17:05</a>
-                      <a href="">17:45</a>
-                      <a href="">18:20</a>
-                      <a href="">19:20</a>
-                      <a href="">20:10</a>
-                      <a href="">20:40</a>
-                      <a href="">22:35</a>
-                      <a href="">23:00</a>
-                    </div>
-                  </div>
+
+          <div class="col-xs-12 Cinemas01">
+            <div class="titleMovieInfo">
+              <img class="movieImage" width="50px"
+                src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-du-15379626329832.jpg">
+              <div class="wrapInfo">
+                <div class="headName">
+                  <h5><strong>GALAXY-Nguyễn Hồng Đào</strong></h5>
                 </div>
-      
-                <div class="col-xs-12 Cinemas01">
-                  <div class="titleMovieInfo">
-                    <img class="movieImage" width="50px"
-                      src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-du-15379626329832.jpg">
-                    <div class="wrapInfo">
-                      <div class="headName">
-                        <p><strong>GALAXY-Nguyễn Du</strong></p>
-                      </div>
-                      <p class="addressInfo"> <span>116 Nguyễn Du, Q.1</span> </p>
-                    </div>
-                  </div>
-                  <div class="listTypeTime">
-                    <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
-                    <div class="timeShow">
-                      <a>13:40</a>
-                      <a>14:30</a>
-                      <a>15:20</a>
-                      <a>17:05</a>
-                      <a>17:45</a>
-                      <a>18:20</a>
-                      <a>19:20</a>
-                      <a>20:10</a>
-                      <a>20:40</a>
-                      <a>22:35</a>
-                      <a>23:00</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...
-              </div>
-              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...
+                <p class="addressInfo"> <span>116 Nguyễn Hồng Đào, Quận Tân Bình</span> </p>
               </div>
             </div>
-      
-      
+            <div class="listTypeTime">
+              <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
+              <div class="timeShow">
+                <a [routerLink]="['/booking']">13:40</a>
+                <a [routerLink]="['/booking']">14:30</a>
+                <a [routerLink]="['/booking']">15:20</a>
+                <a [routerLink]="['/booking']">17:05</a>
+                <a [routerLink]="['/booking']">17:45</a>
+                <a [routerLink]="['/booking']">18:20</a>
+                <a [routerLink]="['/booking']">19:20</a>
+                <a [routerLink]="['/booking']">20:10</a>
+                <a [routerLink]="['/booking']">20:40</a>
+                <a [routerLink]="['/booking']">22:35</a>
+                <a [routerLink]="['/booking']">23:00</a>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+        <!-- Cinestar -->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="col-xs-12 Cinemas01">
+            <div class="titleMovieInfo">
+              <img class="movieImage" width="50px"
+                src="https://s3img.vcdn.vn/123phim/2018/09/cinestar-quoc-thanh-15379636956745.jpg">
+              <div class="wrapInfo">
+                <div class="headName">
+                  <h5><strong>Cinestar-Quốc Thanh</strong></h5>
+                </div>
+                <p class="addressInfo"> <span>271 Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1, Hồ Chí Minh</span> </p>
+              </div>
+            </div>
+            <div class="listTypeTime">
+              <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
+              <div class="timeShow">
+                <a [routerLink]="['/booking']">13:40</a>
+                <a [routerLink]="['/booking']">14:30</a>
+                <a [routerLink]="['/booking']">15:20</a>
+                <a [routerLink]="['/booking']">17:05</a>
+                <a [routerLink]="['/booking']">17:45</a>
+                <a [routerLink]="['/booking']">18:20</a>
+                <a [routerLink]="['/booking']">19:20</a>
+                <a [routerLink]="['/booking']">20:10</a>
+                <a [routerLink]="['/booking']">20:40</a>
+                <a [routerLink]="['/booking']">22:35</a>
+                <a [routerLink]="['/booking']">23:00</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 Cinemas01">
+            <div class="titleMovieInfo">
+              <img class="movieImage" width="50px"
+                src="https://s3img.vcdn.vn/123phim/2018/09/cinestar-quoc-thanh-15379636956745.jpg">
+              <div class="wrapInfo">
+                <div class="headName">
+                  <h5><strong>Cinestar-Hai Bà Trưng</strong></h5>
+                </div>
+                <p class="addressInfo"> <span>135 Hai Bà Trưng, P, Quận 1, Hồ Chí Minh</span> </p>
+              </div>
+            </div>
+            <div class="listTypeTime">
+              <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
+              <div class="timeShow">
+                <a [routerLink]="['/booking']">13:40</a>
+                <a [routerLink]="['/booking']">14:30</a>
+                <a [routerLink]="['/booking']">15:20</a>
+                <a [routerLink]="['/booking']">17:05</a>
+                <a [routerLink]="['/booking']">17:45</a>
+                <a [routerLink]="['/booking']">18:20</a>
+                <a [routerLink]="['/booking']">19:20</a>
+                <a [routerLink]="['/booking']">20:10</a>
+                <a [routerLink]="['/booking']">20:40</a>
+                <a [routerLink]="['/booking']">22:35</a>
+                <a [routerLink]="['/booking']">23:00</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CGV -->
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="col-xs-12 Cinemas01">
+            <div class="titleMovieInfo">
+              <img class="movieImage" width="50px"
+                src="https://s3img.vcdn.vn/123phim/2018/10/lotte-cinema-cong-hoa-15383860949090.jpg">
+              <div class="wrapInfo">
+                <div class="headName">
+                  <h5><strong>CGV-Hùng Vương Plaza</strong></h5>
+                </div>
+                <p class="addressInfo"> <span>Tầng 7 | Hùng Vương Plaza 126 Hùng Vương Quận 5 Tp. Hồ Chí Minh</span> </p>
+              </div>
+            </div>
+            <div class="listTypeTime">
+              <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
+              <div class="timeShow">
+                <a [routerLink]="['/booking']">16:00</a>
+                <a [routerLink]="['/booking']">17:05</a>
+                <a [routerLink]="['/booking']">17:45</a>
+                <a [routerLink]="['/booking']">18:20</a>
+                <a [routerLink]="['/booking']">19:20</a>
+                <a [routerLink]="['/booking']">20:15</a>
+                <a [routerLink]="['/booking']">20:30</a>
+                <a [routerLink]="['/booking']">21:00</a>
+                <a [routerLink]="['/booking']">21:15</a>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 Cinemas01">
+            <div class="titleMovieInfo">
+              <img class="movieImage" width="50px"
+                src="https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-du-15379626329832.jpg">
+              <div class="wrapInfo">
+                <div class="headName">
+                  <h5><strong>CGV - Sư Vạn Hạnh</strong></h5>
+                </div>
+                <p class="addressInfo"> <span>Tầng 6 | Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Phường 12, Quận 10</span></p>
+              </div>
+            </div>
+            <div class="listTypeTime">
+              <img src="https://123phim.vn/app/assets/img/icons/typeSession/2_0.png">
+              <div class="timeShow">
+                <a [routerLink]="['/booking']">13:40</a>
+                <a [routerLink]="['/booking']">14:30</a>
+                <a [routerLink]="['/booking']">15:20</a>
+                <a [routerLink]="['/booking']">17:05</a>
+                <a [routerLink]="['/booking']">17:45</a>
+                <a [routerLink]="['/booking']">18:20</a>
+                <a [routerLink]="['/booking']">19:20</a>
+                <a [routerLink]="['/booking']">20:10</a>
+                <a [routerLink]="['/booking']">20:40</a>
+                <a [routerLink]="['/booking']">22:35</a>
+                <a [routerLink]="['/booking']">23:00</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
